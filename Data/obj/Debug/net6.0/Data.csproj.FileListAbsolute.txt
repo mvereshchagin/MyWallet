@@ -1,0 +1,12 @@
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/bin/Debug/net6.0/Data.deps.json
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/bin/Debug/net6.0/Data.dll
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/bin/Debug/net6.0/ref/Data.dll
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/bin/Debug/net6.0/Data.pdb
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.csproj.AssemblyReference.cache
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.AssemblyInfoInputs.cache
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.AssemblyInfo.cs
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.csproj.CoreCompileInputs.cache
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.dll
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/ref/Data.dll
+/mnt/data/Misha/Projects/csharp/MyWallet/Data/obj/Debug/net6.0/Data.pdb
