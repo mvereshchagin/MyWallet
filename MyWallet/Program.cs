@@ -12,9 +12,9 @@ class Program
     #region readonly
 
     private static readonly string dataDir = @"..\..\Data";
-    private static readonly string filterFileName = "filter.dat";
-    private static readonly string sorterFileName = "sorter.dat";
-    private static readonly string walletFileName = "wallet.dat";
+    private static readonly string filterFileName = "filter";
+    private static readonly string sorterFileName = "sorter";
+    private static readonly string walletFileName = "wallet";
 
     #endregion
 
