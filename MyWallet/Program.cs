@@ -5,6 +5,7 @@ using Data;
 using Utils;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Utils.Serialization;
 
 class Program
 {
@@ -275,13 +276,16 @@ class Program
     
     static void Main(string[] args)
     {
-        var filter = LoadSettings<MoneyItemsFilter>(filterFileName);
-        var sorter = LoadSettings<MoneyItemsSorter>(sorterFileName);
-        // var wallet = LoadSettings<Wallet>(walletFileName);
+        DataSaver dataSaver = new BinaryDataSaver(dataDir: dataDir);
+        
+        var filter = dataSaver.LoadItem<MoneyItemsFilter>(filterFileName);
+        var sorter = dataSaver.LoadItem<MoneyItemsSorter>(sorterFileName);
+        var wallet = dataSaver.LoadItem<Wallet>(walletFileName);
 
         RetrieveExchangeRates();
 
-        var wallet = LoadWallet();
+        if (wallet is null)
+            wallet = LoadWallet();
         var items = ApplyFilterAndSorter(wallet, filter, sorter);
         PrintData(items);
 
@@ -302,9 +306,9 @@ class Program
             }
             else
             {
-                SaveSettings<MoneyItemsFilter>(filterFileName, filter);
-                SaveSettings<MoneyItemsSorter>(sorterFileName, sorter);
-                SaveSettings<Wallet>(walletFileName, wallet);
+                dataSaver.SaveItem(filterFileName, filter);
+                dataSaver.SaveItem(sorterFileName, sorter);
+                dataSaver.SaveItem(walletFileName, wallet);
                 return;
             }
 
