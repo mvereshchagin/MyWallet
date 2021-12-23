@@ -35,46 +35,7 @@ class Program
     #endregion
 
     #region private methods
-
-    private static T? LoadSettings<T>(string fileName) where T : class
-    {
-        string filePath = Path.Combine(dataDir, fileName);
-        BinaryFormatter formatter = new BinaryFormatter();
-
-        T? data = null;
-        if (File.Exists(filePath))
-        {
-            try
-            {
-                using (var stream = File.OpenRead(filePath))
-                    data = (T) formatter.Deserialize(stream);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine($"Cannot read file {filePath}");
-            }
-        }
-
-        return data;
-    }
-
-    private static void SaveSettings<T>(string fileName, T? data) where T : class
-    {
-        if (data is null)
-            return;
-        string filePath = Path.Combine(dataDir, fileName);
-        BinaryFormatter formatter = new BinaryFormatter();
-        try
-        {
-            using (var stream = File.Create(filePath))
-                formatter.Serialize(stream, data);
-        }
-        catch (Exception)
-        {
-            Console.WriteLine($"Cannot save data to file {filePath}");
-        }
-    }
-
+    
     private static void RetrieveExchangeRates()
     {
         Currency[] currencies = new Currency[] {eur, rur, usd};
